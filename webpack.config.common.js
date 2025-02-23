@@ -34,6 +34,15 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.(gif|png|jpe?g|jpg|svg|xml|mp3)$/i,
+        type: 'asset/resource',
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
 }
